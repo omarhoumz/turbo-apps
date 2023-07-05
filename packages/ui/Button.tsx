@@ -1,7 +1,16 @@
-"use client";
+'use client'
 
-import * as React from "react";
+type ButtonProps = {
+  children?: React.ReactNode
+}
 
-export const Button = () => {
-  return <button onClick={() => alert("boop")}>Boop</button>;
-};
+export function Button({ children }: ButtonProps) {
+  return (
+    <button
+      className='px-3 py-1.5 rounded border text-gray-900 text-sm hover:bg-gray-50'
+      onClick={() => alert('boop')}
+    >
+      {children}
+    </button>
+  )
+}
